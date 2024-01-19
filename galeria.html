@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./estilos/estilogaleria.css" rel="stylesheet" type="text/css">
+    <title>Galería de Pelayo</title>
+</head>
+
+<body>
+
+    <!-- Este es el header con un div que contiene el título y la imágen rotada -->
+
+    <header>
+        <div>
+            <p>Galeria de <span>Pelayo</span></p>
+            <img src="./imagenes/escudo.jpg">
+        </div>
+    </header>
+
+    <!-- El menú que se compone de una lista con los diferentes apartados, a los que se les aplica estilos con css para que quede como barra de menú -->
+
+    <nav>
+        <ul>
+            <li><a >Inicio</a></li>
+            <li><a >Historia</a></li>
+            <li><a >Noticias</a></li>
+            <li><a >Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Se aplica un contenedor general con display table para que el contenedor del video y el de los artículos sean display table-cell -->
+
+    <main class="tabla">    <!--display:table-->
+        <div class="celdaarticulo video">  <!-- display: table-cell -->
+            <video src="./videos/futboloficial.mp4" controls></video>   <!--Aquí se inserta el video con controls para que se pueda dar al play o ampliar la pantalla del video-->
+        </div>
+
+
+        <section>  <!-- display: table-cell -->
+            <div class="tablaprincipal">
+                <article class="celdaarticulo">   <!-- Se aplica también un display: table-cell a (."celdaarticulo") para separar la imagen con el texto del artículo-->
+
+                    <h4>Real Sporting de Gijón</h4>
+
+                    <div class="celdaarticulo bordevideo">
+                        <img class="imagen celdaarticulo" src="./imagenes/molinon.png" alt="Sporting">  <!--Se aplican estilos css a cada apartado para darles forma y que queden centrados-->
+                    </div>
+
+                    <div class="celdaarticulo">
+                        <p>El <strong>Real Sporting de Gijón</strong> es un club cargado de profundos sentimientos y arraigo en Gijón, <!--Etiqueta strong para ponerle negrita a los nombres de los equipos-->
+                           con extensión al resto de Asturias, además de dueño de una fecunda historia cuyos orígenes
+                           se remontan al 1 de julio de 1905: hace precisamente hoy 110 años. Hacemos génesis del arranque
+                           de esa larga historia, sustentada en la herencia que ha ido pasando de unas a otras generaciones.
+                           La Guerra Civil dejó en España muchas cicatrices; al club rojiblanco le expolió de sus principales
+                           trofeos y de buena parte de sus bienes y documentos. Incluso le dejó sin sede social, tal como relatamos
+                           recientemente con motivo de la invitación cursada a la plantilla rojiblanca por parte de los responsables
+                           del Café Dindurra. Allí, en el viejo y remozado café del Paseo de Begoña, hace 75 años, tuvo lugar la reunión
+                           que sirvió para constituir la primera Junta Directiva rojiblanca tras la contienda.
+                        </p>
+                    </div>
+
+
+                </article>
+
+
+                
+            </div>
+
+
+            <div class="tablaprincipal">   <!--Otro contenedor con otro artículo como los que van a continuación-->
+                <article class="celdaarticulo">
+
+                    <h4>FC Barcelona</h4>
+
+                    <div class="celdaarticulo">
+                        <img class="imagen celdaarticulo" src="./imagenes/campnou.jpg" alt="Sporting">
+                    </div>
+
+                    <div class="celdaarticulo">
+                        <p>La aventura de la creación del <strong>FC Barcelona</strong> en 1899 por un grupo de jóvenes, extranjeros y catalanes que vivían
+                           en Barcelona, fue la consecuencia de un proceso de expansión de la práctica del fútbol y otros deportes de origen
+                           británico en el continente europeo. Esto explica la naturaleza intercultural del Club, su vocación polideportiva
+                           y la voluntad de arraigo en una ciudad y en un país. Gamper, fundador del Club, fue el alma y el impulsor durante
+                           los primeros 25 años. Su compromiso con el FC Barcelona va más allá de sus facetas como jugador, directivo y presidente.</p>
+                    </div>
+
+
+                </article>
+
+
+                
+            </div>
+
+
+            <div class="tablaprincipal">
+                <article class="celdaarticulo bordearticulo">
+
+                    <h4>Sevilla FC</h4>
+
+                    <div class="celdaarticulo">
+                        <img class="imagen celdaarticulo" src="./imagenes/sevilla.jpg" alt="Sporting">
+                    </div>
+
+                    <div class="celdaarticulo">
+                        <p>El <strong>Sevilla FC</strong> enamora a Europa. Se consiguen seis UEFA Europa League en este período, hito único. Se suman además una Supercopa
+                           de Europa, dos nuevos Campeonatos de España y una Supercopa de España, así como hasta siete clasificaciones para la Liga de Campeones.
+                           En la temporada 2005/06 llega al banquillo Juande Ramos, y con jugadores hasta entonces desconocidos, o en aparente declive de su carrera,
+                           se comienza a forjar un equipo campeón. Son esos primeros años del tercer siglo que conoce la entidad los que hacen que el Sevilla FC sueñe… y cumpla sus sueños.
+                        </p>
+                    </div>
+
+
+                </article>
+
+
+                
+            </div>
+
+
+            <div class="tablaprincipal">
+                <article class="celdaarticulo">
+
+                    <h4>Atlético de Madrid</h4>
+
+                    <div class="celdaarticulo">
+                        <img class="imagen celdaarticulo" src="./imagenes/wanda.jpg" alt="Sporting">
+                    </div>
+
+                    <div class="celdaarticulo">
+                        <p>El 26 de abril de 1903 nace el <strong>Athletic Club de Madrid</strong> impulsado por un grupo de estudiantes vascos que deciden unirse para fundar un nuevo club que compitiera con
+                           el más noble e impecable talante deportivo. Enrique Allende es nombrado primer presidente. La camiseta del equipo es de color azul y blanco en franjas verticales y el pantalón negro o blanco.
+                           En un terreno situado detrás de las tapias del Retiro se ubicó el campo de fútbol del Athletic y el 2 de mayo de 1903 se organizó el primer partido, disputado entre sus socios.
+                        </p>
+                    </div>
+
+
+                </article>
+
+            </div>
+
+            
+        </section>
+
+
+
+    </main>
+
+   
+
+
+
+    
+    
+</body>
+</html>
+

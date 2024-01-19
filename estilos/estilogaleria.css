@@ -1,0 +1,562 @@
+
+/* Aplicamos los estilos generales del body */
+body{
+    margin: 0;
+    padding: 0;
+    color: #000600;
+    background-color:#186618 ;
+    font-size: 16px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    min-width: 580px;
+}
+
+
+
+
+
+
+
+/* Esta es la parte del header, para poner estilo al p, al span y a la imágen / se aplica inline block a los elementos para que queden en la misma línea */
+
+
+header {
+    margin-top: 2em;
+    margin-left: 80px;
+    font-size: 1.8rem;
+}
+
+header p{
+    display: inline-block;
+}
+
+header p span{
+    color: #EA9015 ;
+    font-size: 1.8em;
+}
+
+header img{
+    display: inline-block;
+    width: 120px;
+    transform: rotate(15deg);  /* Esta propiedad para que la imagen se rote */
+    margin-left: 15px;
+    position: relative;
+    top: 15px;
+}
+
+
+
+
+
+/* A continuación se aplican los estilos para el nav con la lista de cada apartado del menú */    
+
+
+
+
+nav{
+    width: 100%;
+    margin-top: 40px;
+    background-color: #000600;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;   /* Para que el texto se centre en */
+    margin-bottom: 20px;
+    text-transform: uppercase;  /*Para aplicar mayúsculas a cada elemento del nav*/
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li{
+    list-style: none;   /* Para eliminar los puntos de cada elemento de la lista */
+    display: inline-block;  /* Para que queden alineados horizontalmente en forma de menú*/
+    width: 20%;
+    cursor: pointer;   /* Para que al pasar el ratón por encima, cambie el tipo de cursor*/
+}
+
+li:hover{
+    background-color: #EA9015;
+    transition: all 0.7s ease;   /* Ponemos una transición para que se produzca el efecto y no sea instantáneo*/
+}
+
+
+
+
+
+
+/* Llegamos a la parte del video y de los articulos, los cuales están metidos en un contenedor con display:table y un contenedor
+ para el video con display: table-cell y para los articulos display:table-cell */
+
+
+
+video{
+    width: 500px;
+    height: 280px;
+    
+}
+
+.tabla{
+    display: table;  /* aquí se aplica la tabla*/
+    border-spacing: 20px; /* para separar los los contenedores del video y del artículo */
+}
+
+.tablaprincipal{
+    width: 100%;
+    border-spacing: 20px;
+    border-bottom: ridge; /* el tipo de borde que va a tener para separar los artículos*/
+    border-color: #245121;
+    border-radius:5px; /* un poco de radio para que no se vean tan rectos los bordes */
+}
+
+.celdaarticulo{
+    display: table-cell;  /* se aplica el table cell*/
+    vertical-align: top;  /* para posicionar el texto arriba */
+}
+
+section{
+    display: table-cell;
+    background-color: #4FA04B ;
+    border: ridge; 
+    border-color: #245121;
+    border-radius:15px;
+}
+
+.imagen{
+    width: 260px;
+    box-shadow: 4px 4px  rgb(1, 51, 9);   /* efecto de sombra en las imágenes*/
+    border-radius: 10px;
+}
+
+h4{
+    margin-left: 20px;
+    margin-top: -.5px ;   /* se aplica el negativo para desplazarlo un poco más abajo*/
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+article div p{
+    text-align: justify;   /* para justificar el texto y se vea mas bonito*/
+    position: relative;
+    bottom: 20px;
+    font-weight: normal;   /* establece el peso de la fuente, si es más negrita o más transparente...*/
+    font-size: 1.05rem;    /* tamaño del texto*/
+    line-height: 20px;   /* separación entre líneas */
+    
+}
+
+
+
+
+
+
+
+
+/* Empezamos con los media query */
+/* Primero con el max-width de 1200px */
+/* He empleado varios media query para probar diferentes tamaños */
+
+
+
+@media screen and (max-width: 1350px){
+
+    header p{
+        font-size: 1.4rem;
+    }
+
+    
+
+    nav{
+        font-size: 1.4rem;
+        width: 100%;
+        
+
+    }
+
+    div video{
+        width: 500px;
+    }
+
+    section{
+        width: 700px;
+    }
+
+    article div p{
+        display: table-row;   /* asignamos table-row para que se desplace debajo de la imagen*/
+        line-height: 30px;  /* ponemos mas grandes las separaciones entre líneas*/
+        font-size: 20px;
+        text-align: justify; 
+
+    } 
+
+    article .celdaarticulo{
+        display: table-row; /*Ponemos también table-row para que se compagine con los demas mini contenedores*/
+        
+    }
+
+    h4{
+        text-align: center;  /*centramos el texto y lo posicionamos un poco para que cuadre bien*/
+        position: relative;
+        right:18px;
+    }
+
+    .imagen{
+        position:relative;    /*Posicionamos la imagen centrada respecto al texto y al h4*/
+        left: 180px;
+        margin-bottom: 30px
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 1200px){
+
+    header p{
+        font-size: 1.4rem;
+    }
+
+    
+
+    nav{
+        font-size: 1.4rem;
+        width: 100%;
+        
+
+    }
+
+    div video{
+        width: 500px;
+    }
+
+    section{
+        width: 700px;
+    }
+
+    article div p{
+        display: table-row;   /* asignamos table-row para que se desplace debajo de la imagen*/
+        line-height: 30px;  /* ponemos mas grandes las separaciones entre líneas*/
+        font-size: 20px;
+        text-align: justify; 
+
+    } 
+
+    article .celdaarticulo{
+        display: table-row; /*Ponemos también table-row para que se compagine con los demas mini contenedores*/
+        
+    }
+
+    h4{
+        text-align: center;  /*centramos el texto y lo posicionamos un poco para que cuadre bien*/
+        position: relative;
+        right:20px;
+    }
+
+    .imagen{
+        position:relative;    /*Posicionamos la imagen centrada respecto al texto y al h4*/
+        left: 140px;
+        margin-bottom: 30px
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 1100px){
+
+    header p{
+        font-size: 1.4rem;
+    }
+
+    
+
+    nav{
+        font-size: 1.4rem;
+        width: 100%;
+        
+
+    }
+
+    div video{
+        width: 500px;
+    }
+
+    section{
+        width: 700px;
+    }
+
+    article div p{
+        display: table-row;
+        line-height: 30px;
+        font-size: 20px;
+        text-align: justify;
+
+    } 
+
+    article .celdaarticulo{
+        display: table-row;
+        
+    }
+
+    h4{
+        text-align: center;
+        position: relative;
+        right:25px;
+    }
+
+    .imagen{
+        position:relative;
+        left: 80px;
+        margin-bottom: 30px
+    }
+}
+
+
+
+
+@media screen and (max-width: 1000px){
+
+    header p{
+        font-size: 1.3rem;
+        margin-left: 20px;
+    }
+
+  
+
+    nav{
+        font-size: 1.2rem;
+        width: 100%;
+        padding-top: 0.1em;
+        padding-bottom: 0.1em;
+    }
+
+    div video{
+        width: 500px;
+        display: table-row;
+        margin-left: 250px;
+    }
+   
+    section{
+        
+        display: table-row;
+        
+    }
+
+    h4{
+        text-align: center;
+        position: relative;
+        left: -18px;
+    }
+
+    .imagen{ 
+        
+        position: relative;
+        left: 300px;
+        margin-bottom: 30px;
+        
+        
+    } 
+
+    article div p{
+        display: table-row;
+    } 
+
+    article .celdaarticulo{
+        display: table-row;
+        
+    }
+
+    
+}
+
+
+
+
+/* Aquí aplicamos un media query para a partir de 1000px para probar nuevos resultados */
+/* Los estilos que aplicamos se asemejan mucho en todos los media-query, lo único que cambia son los tamaños o las posiciones, pero el resto es lo mismo */
+
+
+@media screen and (max-width: 950px){
+
+    header p{
+        font-size: 1.4rem;
+    }
+
+    
+
+    nav{
+        font-size: 1.2rem;
+        width: 100%;
+        padding-top: 0.1em;
+        padding-bottom: 0.1em;
+        
+
+    }
+
+    div video{
+        width: 500px;
+        position: relative;
+        
+    }
+
+    section{
+        width: 700px;
+    }
+
+    article div p{
+        display: table-row;
+        line-height: 30px;
+        font-size: 20px;
+        text-align: justify;
+
+    } 
+
+    article .celdaarticulo{
+        display: table-row;
+        
+    }
+
+    h4{
+        text-align: center;
+        position: relative;
+        right:15px;
+    }
+
+    .imagen{
+        position:relative;
+        left: 280px;
+        margin-bottom: 30px
+    }
+}
+
+
+
+
+
+
+/* Aquí aplicamos con 900 px para ir viendo como cambia de posiciones los elementos */
+
+
+
+
+@media screen and (max-width: 900px){
+
+    
+    header p{
+        font-size: 1.2rem;
+        margin-left: 20px;
+    }
+
+  
+
+    nav{
+        font-size: 0.9rem;
+        width: 100%;
+        padding-top: 0.1em;
+        padding-bottom: 0.1em;
+    }
+
+    div video{
+        width: 450px;
+        display: table-row;
+        margin-left: 190px;
+    }
+   
+    section{
+        
+        display: table-row;
+        
+    }
+
+    h4{
+        text-align: center;
+        position: relative;
+        left: -20px;
+    }
+
+    .imagen{ 
+        
+        position: relative;
+        left: 200px;
+        margin-bottom: 30px;
+        
+        
+    } 
+
+    article div p{
+        display: table-row;
+    } 
+
+    article .celdaarticulo{
+        display: table-row;
+        
+    }
+
+
+
+}
+
+
+
+
+
+
+/* Para la versión de móviles se pone mas grande los tamaños generalmente para que se vea mejor */
+
+
+
+@media screen and (max-width: 600px){
+
+    header p{
+        font-size: 1.3rem;
+        margin-left: 20px;
+    }
+
+  
+
+    nav{
+        font-size: 0.9rem;
+        width: 100%;
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+    }
+
+    div video{
+        width: 450px;
+        display: table-row;
+        margin-left: 50px;
+    }
+   
+    section{
+        
+        display: table-row;
+        
+    }
+
+    h4{
+        text-align: center;
+        position: relative;
+        left: -20px;
+    }
+
+    .imagen{ 
+        
+        position: relative;
+        left: 100px;
+        margin-bottom: 30px
+        
+        
+    } 
+
+    article div p{
+        display: table-row;
+    } 
+
+    article .celdaarticulo{
+        display: table-row;
+        
+    }
+
+}
